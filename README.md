@@ -16,7 +16,12 @@
    ```
    python server.py
    ```
-3. 安装油猴脚本  
+   或者直接运行`gui.exe`（应当提前配置好python运行环境）
+   `exe`文件生成代码：
+   ```
+   pyinstaller -F -w -i server.ico gui.py
+   ```
+4. 安装油猴脚本  
    a. 直接导入js  
    b. 从网站下载：[Greasy Fork](https://greasyfork.org/zh-CN/scripts/570108-%E9%9B%A8%E8%AF%BE%E5%A0%82%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%AF%86%E5%AD%97%E5%BD%A2)
 

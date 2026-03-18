@@ -36,18 +36,23 @@ class ServerManagerApp:
             self.log(">>> 正在启动 server.py...")
             
             try:
+                flags = 0
+                if sys.platform == "win32":
+                    flags = subprocess.CREATE_NO_WINDOW
+
                 self.process = subprocess.Popen(
                     ["python", "server.py"],
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
+                    stdin=subprocess.PIPE,
                     text=True,
                     bufsize=1,
-                    universal_newlines=True
+                    universal_newlines=True,
+                    creationflags=flags
                 )
                 
                 self.run_btn.config(state=tk.DISABLED)
                 self.stop_btn.config(state=tk.NORMAL)
-
                 threading.Thread(target=self.read_output, daemon=True).start()
                 
             except Exception as e:

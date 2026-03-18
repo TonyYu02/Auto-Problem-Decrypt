@@ -1,5 +1,5 @@
 # Auto-Problem-Decrypt
-解决雨课堂题目字形加密的问题
+解决雨课堂题目字形加密的问题，个人兴趣成果，以AI生成为主，主要问题还是太慢了。。。
 
 ## 问题描述
 
@@ -10,7 +10,7 @@
 
 1. 安装依赖
    ```
-   pip install flask requests fontTools beautifulsoup4 flask-cors
+   pip install flask requests fontTools beautifulsoup4
    ```
 2. 运行Python服务
    ```
